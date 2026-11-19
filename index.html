@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090a0c">
+<title>BOLT REAPER</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#07080a;color:#eee;font-family:Arial,Helvetica,sans-serif;background-image:radial-gradient(circle at 50% 15%,#ff174d22,transparent 32%),linear-gradient(135deg,#0b0d0f,#050608 70%,#10080d)}
+.topbar{height:68px;background:#181a1c;display:flex;align-items:center;justify-content:space-between;padding:0 18px;position:sticky;top:0;z-index:20}.brand{font-size:20px;font-weight:900}.editbtn{border:1px solid #ff174d;color:#fff;background:#ff174d22;border-radius:9px;padding:9px 12px;font-weight:900}
+main{max-width:760px;margin:auto;padding:18px 16px 90px}.hero{text-align:center}.logo{width:76px;height:76px;border-radius:14px;object-fit:contain;background:#fff;margin:4px auto 10px;display:block}.micro{font-size:8px;letter-spacing:5px;color:#168d90}.hero h1{font-size:54px;line-height:.88;margin:22px 0 17px;text-shadow:0 0 24px #ff174d88}.hero h1 span{color:#ff174d}.tag{color:#ff174d;font-weight:900;letter-spacing:4px;font-size:13px}.unit{display:inline-block;margin:25px 0 30px;background:#101114;border-radius:50px;padding:15px 34px;color:#168f92;box-shadow:0 0 28px #ff174d2b}.unit b{color:#fff;font-size:21px}.banner{width:100%;height:250px;object-fit:cover;border-radius:18px;border:1px solid #ff174d66;box-shadow:0 0 30px #ff174d25}.title{display:flex;align-items:center;justify-content:space-between;margin:35px 6px 20px}.title h2{font-size:31px;line-height:.95;margin:0}.count{font-size:12px;color:#ff174d;border:1px solid #ff174d;border-radius:50%;padding:15px 17px;text-align:center;font-weight:900}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{min-height:300px;border:1px solid;border-radius:18px;padding:18px;background:linear-gradient(145deg,#111315,#090a0c)}.rowtop{display:flex;justify-content:space-between}.ico{font-size:34px}.num{border:1px solid;border-radius:10px;padding:9px 11px;font-weight:900}.card small{display:block;letter-spacing:3px;margin-top:18px}.card h3{font-size:20px;line-height:1.05;margin:13px 0}.card p{color:#aaa;line-height:1.45;min-height:68px}.card button{width:100%;border:0;border-radius:13px;padding:14px;font-weight:900}.green{border-color:#39ff14}.green small,.green .ico,.green .num{color:#39ff14}.green button{background:#39ff14}.cyan{border-color:#19e9ff}.cyan small,.cyan .ico,.cyan .num{color:#19e9ff}.cyan button{background:#19e9ff}.red{border-color:#ff174d}.red small,.red .ico,.red .num{color:#ff174d}.red button{background:#ff174d;color:#fff}.yellow{border-color:#eaff00}.yellow small,.yellow .ico,.yellow .num{color:#eaff00}.yellow button{background:#eaff00}.orange{border-color:#ffad18}.orange small,.orange .ico,.orange .num{color:#ffad18}.orange button{background:#ffad18}.purple{border-color:#a719ff}.purple small,.purple .ico,.purple .num{color:#b21cff}.purple button{background:#a719ff;color:#fff}
+footer{border:1px solid #ff174d44;border-radius:15px;margin-top:25px;padding:22px;color:#138085;font-size:11px;letter-spacing:2px;line-height:2}.nav{position:fixed;bottom:0;left:0;right:0;height:66px;background:#0d0e10f5;border-top:1px solid #ff174d55;display:flex;justify-content:space-around;align-items:center;z-index:20}.nav a{text-align:center;color:#666;font-size:11px}.nav b{display:block;font-size:9px;margin-top:5px}.nav .active{color:#ff174d}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:50;overflow:auto;padding:20px}.box{max-width:560px;margin:5vh auto;background:#111316;border:1px solid #ff174d99;border-radius:18px;padding:22px;position:relative}.close{position:absolute;right:12px;top:8px;background:none;border:0;color:#fff;font-size:30px}.box h2{color:#ff174d;margin-top:0}.field{margin:13px 0}.field label{display:block;font-weight:800;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;background:#08090b;border:1px solid #333;color:#fff;border-radius:9px;padding:11px;font:inherit}.field textarea{min-height:75px}.save{width:100%;padding:14px;border:0;border-radius:10px;background:#ff174d;color:#fff;font-weight:900;margin-top:8px}.reset{width:100%;padding:12px;border:0;border-radius:10px;background:#292b30;color:#ddd;font-weight:900;margin-top:9px}.preview{width:85px;height:85px;object-fit:contain;background:#fff;border-radius:12px;display:block;margin:8px 0}.hint{font-size:12px;color:#aaa;line-height:1.5}.item{border-bottom:1px solid #ffffff18;padding:12px 0}.item b{color:#fff}.link{color:#19e9ff}
+@media(max-width:600px){.hero h1{font-size:46px}.banner{height:225px}.grid{grid-template-columns:1fr 1fr;gap:11px}.card{min-height:290px;padding:16px}.card h3{font-size:18px}.title h2{font-size:27px}}@media(max-width:420px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="brand" id="topName">BOLT REAPER</div><button class="editbtn" onclick="openEdit()">⚙ EDIT</button></header>
+
+<main>
+<section class="hero">
+<img id="logo" class="logo" alt="Team logo">
+<div class="micro">INTERNATIONAL ESPORTS</div>
+<h1 id="heroName">BOLT <span>REAPER</span></h1>
+<div id="tag" class="tag">▸ OFFICIAL TEAM APP ◂</div>
+<div class="unit">● <b id="shortName">BR</b> UNIT</div>
+<img id="banner" class="banner" alt="Team banner">
+</section>
+
+<section class="title"><h2>COMMUNITY &<br>SQUAD HUB</h2><div class="count">06<br>MODULES</div></section>
+
+<section class="grid">
+<article class="card green"><div class="rowtop"><span class="ico">◎</span><span class="num">01</span></div><small>NETWORK // SYNC</small><h3>TEAM OFFICIAL<br>PLATFORM</h3><p id="linkDesc">Facebook, TikTok, YouTube, WhatsApp, Discord — সকল অফিসিয়াল লিংক এক ছাতায়।</p><button onclick="showLinks()">OPEN LINKS ▸</button></article>
+<article class="card cyan"><div class="rowtop"><span class="ico">♧</span><span class="num">02</span></div><small>SQUAD // ROSTER</small><h3>PLAYER LIST</h3><p>আমাদের টিমের প্রতিটি প্লেয়ারের পরিচয় ও রোল দেখুন।</p><button onclick="showPlayers()">VIEW LIST ▸</button></article>
+<article class="card red"><div class="rowtop"><span class="ico">♜</span><span class="num">03</span></div><small>GLORY // VAULT</small><h3>TEAM<br>CHAMPION</h3><p>টুর্নামেন্ট ও চ্যাম্পিয়নশিপ স্ট্যাটাস এখানে।</p><button onclick="showChampions()">VIEW CHAMPIONS ▸</button></article>
+<article class="card yellow"><div class="rowtop"><span class="ico">▤</span><span class="num">04</span></div><small>PROTOCOL // LAW</small><h3>TEAM RULES</h3><p>টিমের নিয়ম ও নীতিমালার পূর্ণ তালিকা।</p><button onclick="showRules()">VIEW RULES ▸</button></article>
+<article class="card orange"><div class="rowtop"><span class="ico">◇</span><span class="num">05</span></div><small>TRADE // VALUE</small><h3>PLAYER MARKET</h3><p>প্লেয়ারদের ভ্যালুয়েশন ও কনট্রাক্ট রেট দেখুন।</p><button onclick="showMarket()">VIEW MARKET ▸</button></article>
+<article class="card purple"><div class="rowtop"><span class="ico">✦</span><span class="num">06</span></div><small>BUILD // CONTACT</small><h3>APP<br>DEVELOPER</h3><p>নিজের অ্যাপ তৈরি করতে চান? সরাসরি যোগাযোগ করুন।</p><button onclick="showDeveloper()">CONTACT DEV ▸</button></article>
+</section>
+
+<footer><b id="footerName">BOLT REAPER</b> © 2026 // ALL RIGHTS RESERVED<br>BUILD V1.0 // STATUS: OPERATIONAL</footer>
+</main>
+
+<nav class="nav"><a class="active">[HM]<b>HOME</b></a><a>[TM]<b>TEAM</b></a><a>[CH]<b>CHAMPION</b></a><a>[PL]<b>PLAYER</b></a><a>[RU]<b>RULES</b></a></nav>
+
+<div id="editModal" class="modal" onclick="if(event.target===this)closeEdit()">
+<div class="box"><button class="close" onclick="closeEdit()">×</button><h2>⚙ BOLT REAPER EDIT PANEL</h2><p class="hint">এখান থেকে অ্যাপের তথ্য পরিবর্তন করো। Save করলে এই ব্রাউজারে সংরক্ষিত থাকবে।</p>
+<div class="field"><label>Team Name</label><input id="eName"></div>
+<div class="field"><label>Short Name</label><input id="eShort"></div>
+<div class="field"><label>Tagline</label><input id="eTag"></div>
+<div class="field"><label>Team Logo</label><input id="eLogo" type="file" accept="image/*"><img id="logoPreview" class="preview"></div>
+<div class="field"><label>Team Banner</label><input id="eBanner" type="file" accept="image/*"><img id="bannerPreview" class="preview" style="width:100%;height:100px"></div>
+<div class="field"><label>Official Links</label><textarea id="eLinks" placeholder="Facebook=https://...&#10;TikTok=https://...&#10;YouTube=https://..."></textarea></div>
+<button class="save" onclick="saveEdit()">SAVE CHANGES</button><button class="reset" onclick="resetAll()">RESET DEMO DATA</button>
+</div></div>
+
+<div id="contentModal" class="modal" onclick="if(event.target===this)closeContent()"><div class="box"><button class="close" onclick="closeContent()">×</button><div id="content"></div></div></div>
+
+<script>
+const DEMO={
+name:"BOLT REAPER",short:"BR",tag:"▸ OFFICIAL TEAM APP ◂",
+logo:"",banner:"",links:"Facebook=https://facebook.com/\\nTikTok=https://tiktok.com/\\nYouTube=https://youtube.com/\\nWhatsApp=https://whatsapp.com/\\nDiscord=https://discord.com/",
+players:[
+["PLAYER 01","SNIPER"],["PLAYER 02","RUSHER"],["PLAYER 03","SUPPORT"],["PLAYER 04","IGL"]
+],
+champions:["🏆 Tournament Champion — Add event name","🥇 1st Place — Add event name"],
+rules:["01 — Respect every teammate.","02 — No toxic behavior.","03 — Daily practice and teamwork.","04 — Follow tournament rules."],
+market:["Player valuation — Coming soon","Contract information — Add your data"]
+};
+let data=JSON.parse(localStorage.getItem("BR_DATA")||"null")||structuredClone(DEMO);
+let pendingLogo=null,pendingBanner=null;
+const $=id=>document.getElementById(id);
+
+function splitName(n){let p=n.trim().split(/\s+/);if(p.length<2)return n;return p.slice(0,-1).join(" ")+" <span>"+p[p.length-1]+"</span>"}
+function apply(){
+ $("topName").textContent=data.name;$("footerName").textContent=data.name;$("heroName").innerHTML=splitName(data.name);
+ $("shortName").textContent=data.short;$("tag").textContent=data.tag;
+ if(data.logo)$("logo").src=data.logo;else $("logo").style.visibility="hidden";
+ if(data.banner)$("banner").src=data.banner;else {$("banner").style.visibility="hidden";$("banner").style.height="0";$("banner").style.marginBottom="10px"}
+}
+function openEdit(){
+ $("eName").value=data.name;$("eShort").value=data.short;$("eTag").value=data.tag;$("eLinks").value=data.links;
+ $("logoPreview").src=data.logo||"";$("bannerPreview").src=data.banner||"";
+ pendingLogo=null;pendingBanner=null;$("editModal").style.display="block";
+}
+function closeEdit(){$("editModal").style.display="none"}
+function readFile(input,cb){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=()=>cb(r.result);r.readAsDataURL(f)}
+$("eLogo").addEventListener("change",()=>readFile($("eLogo"),x=>{pendingLogo=x;$("logoPreview").src=x}));
+$("eBanner").addEventListener("change",()=>readFile($("eBanner"),x=>{pendingBanner=x;$("bannerPreview").src=x}));
+function saveEdit(){
+ data.name=$("eName").value.trim()||"BOLT REAPER";data.short=$("eShort").value.trim()||"BR";data.tag=$("eTag").value.trim()||"▸ OFFICIAL TEAM APP ◂";data.links=$("eLinks").value.trim();
+ if(pendingLogo)data.logo=pendingLogo;if(pendingBanner)data.banner=pendingBanner;
+ localStorage.setItem("BR_DATA",JSON.stringify(data));apply();closeEdit();alert("BOLT REAPER changes saved!");
+}
+function resetAll(){if(confirm("সব demo data আবার reset করবে?")){localStorage.removeItem("BR_DATA");location.reload()}}
+function openContent(title,body){$("content").innerHTML="<h2>"+title+"</h2>"+body;$("contentModal").style.display="block"}
+function closeContent(){$("contentModal").style.display="none"}
+function showLinks(){let rows=data.links.split("\\n").filter(Boolean).map(x=>{let p=x.split("=");return '<div class="item"><b>'+p[0]+'</b><br><a class="link" target="_blank" href="'+(p.slice(1).join("="))+'">'+(p.slice(1).join("="))+'</a></div>'}).join("");openContent("TEAM OFFICIAL PLATFORM",rows||"<p>No links added.</p>")}
+function showPlayers(){openContent("PLAYER LIST",data.players.map(x=>'<div class="item"><b>'+x[0]+'</b> — '+x[1]+'</div>').join(""))}
+function showChampions(){openContent("TEAM CHAMPION",data.champions.map(x=>'<div class="item">'+x+'</div>').join(""))}
+function showRules(){openContent("TEAM RULES",data.rules.map(x=>'<div class="item">'+x+'</div>').join(""))}
+function showMarket(){openContent("PLAYER MARKET",data.market.map(x=>'<div class="item">'+x+'</div>').join(""))}
+function showDeveloper(){openContent("APP DEVELOPER","<p>Developer contact can be added here later.</p>")}
+apply();
+</script>
+</body></html>
